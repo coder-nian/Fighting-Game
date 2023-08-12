@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Kanit;
+}
+
+button {
+  font-family: Kanit;
+}
+
+body {
+  background-color: #776f7b;
+}
 
 body {
   background:'blue';
@@ -96,7 +110,7 @@ body {
   width: 60px;
   border-radius: 50px;
   border:none;
-  background: #FFFF01;
+  background: #ff0000;
   outline: none;
 
 }
@@ -106,7 +120,7 @@ body {
   width: 60px;
   border-radius: 50px;
   border:none;
-  background: #7DFFFF;
+  background: #47ff4a;
   outline: none;
 
 }
@@ -116,9 +130,9 @@ body {
   width: 120px;
   border-radius: 20px;
 /*   border:none; */
-  background: #02cf02;
+  background: #00ffd5;
   outline: none;
-  color: white;
+  color: black;
 }
 
 #result {
@@ -132,9 +146,9 @@ body {
   width: 100px;
   border-radius: 20px;
 /*   border:none; */
-  background: #FF8800;
+  background: #ffd500;
   outline: none;
-  color: white;
+  color: black;
 }
 
 .resultContainer {
