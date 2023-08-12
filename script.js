@@ -31,14 +31,14 @@ class Player {
     
     let damageAmount = Math.ceil(Math.random() * attackDmg)
     enemy.health -= damageAmount
-    updateGame(p1, p2, game.isOver)
+    updateGame(p1, p2, gameState)
     return `${player.name} attacks ${enemy.name} for ${damageAmount} damage!`
   }
 
   heal (player) {
     let hpAmount = Math.ceil(Math.random() * 5)
     player.health += hpAmount
-    updateGame(p1, p2, game.isOver)
+    updateGame(p1, p2, gameState)
     return `${player.name} heals for ${hpAmount} HP!`
   }
 }
