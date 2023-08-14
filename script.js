@@ -72,18 +72,6 @@ class Game {
     updateGame(p1, p2, this.isOver)
   }
   
-  play(p1, p2) {
-    this.reset(p1, p2)
-
-    while (!this.isOver) {
-      p1.strike(p1, p2, p1.attackDmg)
-      p2.strike(p2, p1, p2.attackDmg)
-      p1.heal(p1)
-      p2.heal(p2)
-    }
-    
-    return this.declareWinner(this.isOver, p1, p2)
-  }
 }
 
 let player1 = new Player('Player 1', 100, 10)
@@ -97,8 +85,6 @@ let game = new Game()
 updateGame(p1, p2)
 
 let gameState = game.isOver
-
-playButton.onclick = () => resultDiv.innerText = game.play(p1, p2)
 
 document.addEventListener('keydown', function(e) {
   if(e.key == 'q' && p2.health > 0 && game.isOver == false)
