@@ -5,6 +5,7 @@ let p2NameDiv = document.getElementById('p2Name')
 let p1HealthDiv = document.getElementById('p1Health')
 let p2HealthDiv = document.getElementById('p2Health')
 
+//Updates diplayed text on the user screen
 const updateGame = (p1,p2,gameState) => {
   p1NameDiv.innerText = p1.name
   p2NameDiv.innerText = p2.name
@@ -20,6 +21,7 @@ const updateGame = (p1,p2,gameState) => {
   }
 }
 
+//Player class with properties and methods for manipulating DOM
 class Player {
   constructor(name, health, attackDamage) {
     this.name = name;
@@ -43,6 +45,7 @@ class Player {
   }
 }
 
+//Game class with reset & declare winner methods for controlling game
 class Game {
   constructor() {
     this.isOver = false;
@@ -86,6 +89,7 @@ updateGame(p1, p2)
 
 let gameState = game.isOver
 
+//Keys to attack & heal
 document.addEventListener('keydown', function(e) {
   if(e.key == 'q' && p2.health > 0 && game.isOver == false)
   {
